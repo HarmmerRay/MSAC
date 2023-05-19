@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Components/Components.iml" filepath="$PROJECT_DIR$/Components/Components.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Connection/Connection.iml" filepath="$PROJECT_DIR$/Connection/Connection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MSAC.iml" filepath="$PROJECT_DIR$/MSAC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Server/Server.iml" filepath="$PROJECT_DIR$/Server/Server.iml" />
+    </modules>
+  </component>
+</project>
