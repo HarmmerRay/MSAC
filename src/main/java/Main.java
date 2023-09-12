@@ -1,7 +1,9 @@
 package main.java;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class Main {
@@ -37,6 +39,17 @@ public class Main {
             }
         }
         return q.size();
+    }
+    //1462. 课程表 IV
+    public List<Boolean> checkIfPrerequisite(int numCourses,int [][]prerequisite,int [][] queries){
+        List<Boolean> res= new ArrayList<>();
+        if(prerequisite.length ==0){
+            for(int i=0;i<queries.length;i++){
+                res.add(false);
+            }
+            return res;
+        }
+        return res;
     }
     public static void main(String[] args) {
         waysToBuyPensPencils(20,10,5);
