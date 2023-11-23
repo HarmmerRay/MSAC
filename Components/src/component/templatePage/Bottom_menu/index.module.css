@@ -1,0 +1,36 @@
+.footer{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    min-width: 1200px;
+}
+
+.footer_top{
+    flex: 2;
+}
+
+.footer_ul>li:first-child{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer_ul{
+    float: left;
+    width: 150px;
+    height: auto;
+    margin: 30px 40px;
+}
+
+.footer_bottom{
+    border-top: 0.6px solid rgb(179, 178, 179);
+    flex: 1;
+}
+
+.footer_bottom>ul>li{
+    float: left;
+    margin: 20px;
+}

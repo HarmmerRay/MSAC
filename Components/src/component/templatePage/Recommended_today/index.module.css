@@ -1,0 +1,44 @@
+.recommend {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    align-items: center;
+    background-color: #d92929;
+    min-width: 1300px;
+}
+
+.recommend_ul>li {
+    width: 20%;
+    height: 185px;
+    float: left;
+    text-align: center;
+}
+
+.recommend_ul>li>img {
+    width: 280px;
+    height: 185px;
+    float: left;
+}
+
+/* .recommend_ul {
+    
+} */
+
+.recommend_ul_l1 {
+    background-color: rgb(68, 57, 42);
+}
+
+.recommend_ul_clock {
+    padding: 30px 0;
+}
+
+.recommend_ul_clock>img {
+    width: 100px;
+    height: 100px;
+}
+
+.recommend_ul_clock>p {
+    font-size: 18px;
+    font-weight: 900;
+    color: #ffffff;
+}

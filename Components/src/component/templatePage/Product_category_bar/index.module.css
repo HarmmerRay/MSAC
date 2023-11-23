@@ -1,0 +1,29 @@
+.headernav {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    min-width: 800px;
+}
+
+.header_font {
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+.header_font>a {
+    text-decoration: none;
+}
+
+.header_font_red {
+    width: 260px;
+    background-color: rgb(210, 0, 0);
+    color: #ffffff;
+    font-weight: 900px;
+}

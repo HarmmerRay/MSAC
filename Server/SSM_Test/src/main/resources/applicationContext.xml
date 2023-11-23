@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:component-scan base-package="dao"/>
+    <context:component-scan base-package="service"/>
+    <context:component-scan base-package="entity"/>
+
+    <bean id="student1" class="entity.demo.Student">
+        <property name="id" value="1"/>
+        <property name="name" value="赵阳"/>
+        <property name="age" value="18"/>
+        <property name="gender" value="男"/>
+    </bean>
+    <bean id="student3" class="entity.demo.Student" p:age="18" p:gender="男" p:name="赵阳" p:id="1"/>
+    <bean id="student2" class="entity.demo.Student">
+        <constructor-arg name="id" value="2"/>
+        <constructor-arg name="name" value="敖倩"/>
+        <constructor-arg index="2" value="18"/>
+        <constructor-arg name="gender" value="女"/>
+        <constructor-arg name="cLazz" ref="clazz1"/>
+    </bean>
+    <bean id="clazz1" class="entity.demo.CLazz">
+        <property name="name" value="软件2102"/>
+        <property name="belong" value="信息技术工程学院"/>
+        <property name="capacity" value="26"/>
+    </bean>
+
+
+    <bean id="loggerBefore" class="tools.aop.LoggerBefore"/>
+    <bean id="loggerAfterReturning" class="tools.aop.LoggerAfterReturning"/>
+    <bean id="studentService" class="service.StudentService"/>
+
+
+    <aop:config>
+        <aop:pointcut id="pointcut" expression="execution(* service.StudentService.findAll() )"/>
+        <aop:advisor pointcut-ref="pointcut" advice-ref="loggerBefore"/>
+        <aop:advisor pointcut-ref="pointcut" advice-ref="loggerAfterReturning"/>
+    </aop:config>
+
+    <bean id="myLogger" class="tools.aop.MyLogger"/>
+    <aop:config>
+        <aop:pointcut expression="execution(* service.StudentService.findAll() )" id="pointcut"/>
+        <aop:aspect ref="myLogger">
+            <aop:before method="beforeMethod" pointcut-ref="pointcut"/>
+            <aop:after method="afterMethod" pointcut-ref="pointcut"/>
+        </aop:aspect>
+    </aop:config>
+
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/SSM"/>
+        <property name="username" value="root"/>
+        <property name="password" value="000000"/>
+    </bean>
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <bean id="alipayDao" class="dao.demo.AlipayDaoImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+<!--    <tx:annotation-driven transaction-manager="txManager"/></beans>-->
+
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <tx:method name="add*" propagation="REQUIRED" />
+            <tx:method name="insert*" propagation="REQUIRED" />
+            <tx:method name="delete*" propagation="REQUIRED" />
+            <tx:method name="update*" propagation="REQUIRED" />
+            <tx:method name="search*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="select*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="find*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="get*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="*" propagation="REQUIRED" isolation="DEFAULT" read-only="false"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <aop:pointcut id="txPointcut" expression="execution(* dao.demo.*.*(..) )"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+    </aop:config>
+
+</beans>

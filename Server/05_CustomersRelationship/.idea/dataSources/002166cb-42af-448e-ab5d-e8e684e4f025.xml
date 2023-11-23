@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="crm@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.45">
+    <root id="1">
+      <DefaultCasing>exact</DefaultCasing>
+      <ServerVersion>8.0.31</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="app"/>
+    <schema id="3" parent="1" name="crm">
+      <Current>1</Current>
+    </schema>
+    <schema id="4" parent="1" name="db_film"/>
+    <schema id="5" parent="1" name="fruit_manager"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="jfinaloa"/>
+    <schema id="8" parent="1" name="mysql"/>
+    <schema id="9" parent="1" name="pan"/>
+    <schema id="10" parent="1" name="park"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="studentmanager"/>
+    <schema id="13" parent="1" name="sys"/>
+    <schema id="14" parent="1" name="tale"/>
+    <schema id="15" parent="1" name="tea_design"/>
+  </database-model>
+</dataSource>

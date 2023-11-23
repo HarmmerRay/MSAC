@@ -1,0 +1,54 @@
+.guess_you_like{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.guess_you_like_font_a{
+    margin: 15px 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.guess_you_like_commodity{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.guess_you_like_commodity_a{
+    width: 230px;
+    height: 310px;
+    border: 0.3px solid rgb(179, 178, 179);
+    float: left;
+    margin: 0 7.5px;
+}
+
+.guess_you_like_commodity_a_img{
+    width: 225px;
+    height: 230px;
+}
+
+.guess_you_like_commodity_a>span{
+    color: #d92929;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.guess_you_like_commodity_a>div>a{
+    text-decoration: none;
+}
+
+#Change_1{
+    display: block;
+}
+
+#Change_2{
+    display: none;
+}

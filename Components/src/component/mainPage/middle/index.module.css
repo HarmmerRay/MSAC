@@ -1,0 +1,124 @@
+.container {
+    width: 60%;
+    height: 100%;
+    background: #444654;
+    display: flex;
+    justify-content: center;
+    /* overflow-y: auto; */
+    overflow: auto;
+    color: #ffffff;
+    padding-left: 500px;
+}
+.overall{
+   background: white;
+}
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a:link,
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+ul {
+    list-style: none;
+}
+
+.partition {
+    width: 100%;
+    height: 3px;
+    background: rgb(210, 0, 0);
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.centernav {
+    width: 90%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.right_nacbar {
+    flex: 2;
+    border: 0.5px solid;
+}
+
+.right_nacbar_top a {
+    text-decoration: none;
+}
+
+
+
+.right_nacbar_top_a {
+    height: 20px;
+    padding: 6px;
+}
+
+.font_a {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.font_b {
+    float: right;
+}
+
+.right_nacbar_center>ul>li {
+    float: left;
+}
+
+.right_nacbar_center>ul>li>p {
+    text-align: center;
+}
+
+.right_nacbar_center>ul>li>a>img {
+    width: 60px;
+    height: 50px;
+}
+
+.right_nacbar_buttom>img {
+    width: 300px;
+    height: 115px;
+}
+
+
+/*滚动条样式*/
+.container::-webkit-scrollbar {
+    width: 10px;    
+    height: 10px;
+}
+.container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(255, 254, 255, 0.6);
+}
+.container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.6);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+
+.moren{
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+

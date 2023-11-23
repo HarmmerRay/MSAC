@@ -6,11 +6,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="evaluation" />
+        <module name="StudentInfo" />
+        <module name="SpringbootCRM" />
+        <module name="book" />
+        <module name="HouseRent" />
+        <module name="SSM_Test" />
+        <module name="studentmanager" />
         <module name="MSAC" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="book" target="1.8" />
+      <module name="evaluation" target="1.8" />
+      <module name="HouseRent" target="1.8" />
       <module name="MSAC" target="1.8" />
+      <module name="SpringbootCRM" target="1.8" />
+      <module name="SSM_Test" target="1.8" />
+      <module name="StudentInfo" target="1.8" />
+      <module name="studentmanager" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="HouseRent" options="-parameters" />
+      <module name="SSM_Test" options="-parameters" />
+      <module name="SpringbootCRM" options="-parameters" />
+      <module name="evaluation" options="-parameters" />
+      <module name="studentmanager" options="-parameters" />
+    </option>
   </component>
 </project>

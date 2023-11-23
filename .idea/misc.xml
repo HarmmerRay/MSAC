@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Server/02_Books-Management-System" />
+    <file type="web" url="file://$PROJECT_DIR$/Server/04_StudentInfo" />
+    <file type="web" url="file://$PROJECT_DIR$/Server/SSM_Test" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Server/01_StudentsManager/pom.xml" />
+        <option value="$PROJECT_DIR$/Server/02_Books-Management-System/pom.xml" />
+        <option value="$PROJECT_DIR$/Server/03_CourseEvaluation/pom.xml" />
+        <option value="$PROJECT_DIR$/Server/04_StudentInfo/pom.xml" />
+        <option value="$PROJECT_DIR$/Server/05_CustomersRelationship/pom.xml" />
+        <option value="$PROJECT_DIR$/Server/06_HouseRent/pom.xml" />
+        <option value="$PROJECT_DIR$/Server/SSM_Test/pom.xml" />
       </list>
     </option>
   </component>

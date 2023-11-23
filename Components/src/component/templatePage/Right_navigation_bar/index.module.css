@@ -1,0 +1,44 @@
+.right_nacbar {
+    flex: 2;
+    border: 0.5px solid;
+}
+
+.right_nacbar_top a {
+    text-decoration: none;
+}
+
+/* .right_nacbar_top {
+    
+} */
+
+.right_nacbar_top_a {
+    height: 20px;
+    padding: 6px;
+}
+
+.font_a {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.font_b {
+    float: right;
+}
+
+.right_nacbar_center>ul>li {
+    float: left;
+}
+
+.right_nacbar_center>ul>li>p {
+    text-align: center;
+}
+
+.right_nacbar_center>ul>li>a>img {
+    width: 60px;
+    height: 50px;
+}
+
+.right_nacbar_buttom>img {
+    width: 300px;
+    height: 115px;
+}

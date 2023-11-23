@@ -1,0 +1,9 @@
+ test:
+    id: 1
+    name: 赵阳
+    age: 18
+    gender: 男
+ class:
+    name: 软件2102
+    capacity: 26
+    belong: 信息技术工程学院

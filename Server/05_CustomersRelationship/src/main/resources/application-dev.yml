@@ -1,0 +1,23 @@
+debug: true
+logging:
+  level:
+    root: debug
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 1
+      max-active: 20
+      min-idle: 1
+      stat-view-servlet:
+        allow: true
+      test-on-borrow: true
+    url: jdbc:mysql://localhost:3306/crm
+    username: root
+    password: 000000
+  thymeleaf:
+    cache: false

@@ -1,0 +1,34 @@
+<!--<!DOCTYPE mapper-->
+<!--        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"-->
+<!--        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+<!--<mapper namespace="StudentDao">-->
+<!--    <select id="findAll" resultType="entity.demo.Student">-->
+<!--        select id,name,age,gender from student;-->
+<!--    </select>-->
+<!--    <select id="findById" resultType="String">-->
+<!--        select id,name,age,gender from student where id=#{id}-->
+<!--    </select>-->
+<!--    <select id="insert" parameterType="entity.demo.Student">-->
+<!--        insert into student (id,name,age,gender) values (#{id},#{name},#{age},#{gender});-->
+<!--    </select>-->
+<!--    <select id="deleteById" parameterType="String">-->
+<!--        delete from student where id=#{id};-->
+<!--    </select>-->
+<!--    <select id="update" parameterType="entity.demo.Student">-->
+<!--        update student set name=#{name},age=#{age},gender=#{gender} where id=#{id};-->
+<!--    </select>-->
+
+<!--&lt;!&ndash;    <select id="findByName" parameterType="String" resultMap="StudentDao">&ndash;&gt;-->
+<!--&lt;!&ndash;        select id,name,age,gender from student.yaml where 1=1&ndash;&gt;-->
+<!--&lt;!&ndash;        <if test="name != null and name ！= ''">&ndash;&gt;-->
+<!--&lt;!&ndash;            and name like concat('%',#{name},'%')&ndash;&gt;-->
+<!--&lt;!&ndash;        </if>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </select>&ndash;&gt;-->
+<!--    <resultMap id="studentResultMap" type="entity.demo.Student">-->
+<!--        <id property="id" column="id"></id>-->
+<!--        <result property="name" column="name"></result>-->
+<!--        <result property="gender" column="gender"/>-->
+<!--        <result property="age" column="age"/>-->
+<!--    </resultMap>-->
+<!--</mapper>--><root></root>
