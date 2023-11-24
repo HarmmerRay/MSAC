@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+ <script src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!--开发环境-->
+<!-- <script src = "https://cdn.jsdeliver.net/npm/vue"></script>生产环境 -->
+<html lang="en">
+    <head>
+        <title>我的第一个Vue程序</title>
+        <!-- <script src="vue.js"></script> -->
+    </head>
+    <body>
+        <div id="app">
+            <p> 价格：{{price}}</p>
+            <input type="test" v-model="price">
+            <p>数量： {{num}}</p>
+            <p>总价： {{totalPrice}}</p>
+            <p> {{msg}}</p>
+            <p>{{msg | toUpcase}}</p>
+            <div v-bind:id="msg | toUpcase"></div>
+        </div>
+
+        <div id="app2">
+            <p>{{msg2}}</p>
+            <button @click = "showInfo">请单击</button>
+        </div>
+
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    price: 20,
+                    num: 8,
+                    msg: "helloworld"
+                },
+
+                filters:{
+                    toUpcase (value){
+                        return value ? value.toUpperCase() : ""
+                    }
+                },
+
+                computed:{
+                    totalPrice (){
+                        return this.price * this.num
+                    }
+                },
+                watch :{
+                    price (newPrice,oldPrice){
+                        console.log(newPrice,oldPrice)
+                    }
+                }
+
+            })
+        
+        </script>
+        <script>
+            var vm = new Vue({
+                el: "#app2",
+                data: {
+                    msg2: '唯一根标签app2'
+                },
+                methods: {
+                    showInfo (){
+                        console.log("帅哥赵阳")
+                        }
+                }
+            })
+            console.log("data初始化数据"+vm.msg2)
+
+            
+        </script>
+        
+    </body>
+</html>
