@@ -16,16 +16,6 @@
         <module name="MSAC" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="book" target="1.8" />
-      <module name="evaluation" target="1.8" />
-      <module name="HouseRent" target="1.8" />
-      <module name="MSAC" target="1.8" />
-      <module name="SpringbootCRM" target="1.8" />
-      <module name="SSM_Test" target="1.8" />
-      <module name="StudentInfo" target="1.8" />
-      <module name="studentmanager" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

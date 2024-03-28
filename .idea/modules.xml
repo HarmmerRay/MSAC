@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/Components/Components.iml" filepath="$PROJECT_DIR$/Components/Components.iml" />
       <module fileurl="file://$PROJECT_DIR$/Connection/Connection.iml" filepath="$PROJECT_DIR$/Connection/Connection.iml" />
       <module fileurl="file://$PROJECT_DIR$/Server/06_HouseRent/HouseRent.iml" filepath="$PROJECT_DIR$/Server/06_HouseRent/HouseRent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MSAC.iml" filepath="$PROJECT_DIR$/MSAC.iml" />
       <module fileurl="file://$PROJECT_DIR$/Server/SSM_Test/SSM_Test.iml" filepath="$PROJECT_DIR$/Server/SSM_Test/SSM_Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/Server/Server.iml" filepath="$PROJECT_DIR$/Server/Server.iml" />
       <module fileurl="file://$PROJECT_DIR$/Server/05_CustomersRelationship/SpringbootCRM.iml" filepath="$PROJECT_DIR$/Server/05_CustomersRelationship/SpringbootCRM.iml" />

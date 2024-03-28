@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSAC低代码平台</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+    }
+    #header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+    }
+    #header h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+    #user-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ccc;
+    }
+    #sidebar {
+        background-color: #f2f2f2;
+        width: 300px;
+        padding: 20px;
+    }
+    .category {
+        margin-bottom: 20px;
+    }
+    .category h2 {
+        margin-bottom: 10px;
+    }
+    .component-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .component {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: calc(50% - 10px);
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    .component:last-child {
+        margin-right: 0;
+    }
+    .component:hover {
+        background-color: #eaeaea;
+    }
+    #workspace-container {
+        display: flex;
+    }
+    #workspace {
+        flex: 1;
+        padding: 20px;
+        border: 2px dashed #ccc;
+        min-height: 200px;
+    }
+</style>
+</head>
+<body>
+    <div id="header">
+        <h1>MSAC低代码平台</h1>
+        <div id="user-avatar">
+            <img src = "./images/avatar.png" alt="User Avatar"></img>
+            <noscript>User Avatar</noscript>
+        </div>
+    </div>
+
+    <div id="sidebar">
+        <div class="category">
+            <h2>基础组件</h2>
+            <div class="component-container">
+                <div class="component" draggable="true">组件1</div>
+                <div class="component" draggable="true">组件2</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>场景组件</h2>
+            <div class="component-container">
+                <div class="component" draggable="true">组件3</div>
+                <div class="component" draggable="true">组件4</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>内容组件</h2>
+            <div class="component-container">
+                <div class="component" draggable="true">组件5</div>
+                <div class="component" draggable="true">组件6</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>布局组件</h2>
+            <div class="component-container">
+                <div class="component" draggable="true">组件7</div>
+                <div class="component" draggable="true">组件8</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>图表组件</h2>
+            <div class="component-container">
+                <div class="component" draggable="true">组件9</div>
+                <div class="component" draggable="true">组件10</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="workspace-container">
+        <div id="workspace" contenteditable="true">
+            拖动组件到这里构建你的网页
+        </div>
+    </div>
+
+    <script>
+        // Placeholder for user avatar
+        const userAvatar = document.getElementById('user-avatar');
+        userAvatar.textContent = 'U';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const components = document.querySelectorAll('.component');
+            const workspace = document.getElementById('workspace');
+
+            components.forEach(component => {
+                component.addEventListener('dragstart', function(event) {
+                    event.dataTransfer.setData('text/plain', component.innerText);
+                });
+            });
+
+            workspace.addEventListener('dragover', function(event) {
+                event.preventDefault();
+            });
+
+            workspace.addEventListener('drop', function(event) {
+                event.preventDefault();
+                const textData = event.dataTransfer.getData('text/plain');
+                const newComponent = document.createElement('div');
+                newComponent.innerText = textData;
+                workspace.appendChild(newComponent);
+            });
+        });
+    </script>
+</body>
+</html>
